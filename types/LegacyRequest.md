@@ -11,7 +11,7 @@ The `LegacyRequest` query has one parameter, which specifies the requested data.
 
 1. **requestId** (uint256): unique identifier of the request. Each `requestId` maps to a an asset/currency pair. For example `requestId` 1 means the spot price of ETH in USD.
 
-The `requestId` should be a requestId from the Tellor system before the TellorX upgrade. Unlike all newer `queryId`s, the hash of the `queryData` is not the `queryId` for `LegacyRequest` Query types. 
+The `requestId` should be a requestId from the Fetch system before the FetchX upgrade. Unlike all newer `queryId`s, the hash of the `queryData` is not the `queryId` for `LegacyRequest` Query types. 
 
 
 ## Granularity
@@ -32,7 +32,7 @@ Existing LegacyRequest queries:
     - `requestId`: 2 (BTC/USD)
     - `requestId`: 10 (AMPL/USD)
     - `requestId`: 41 (USPCE value)
-    - `requestId`: 50 (TRB/USD)
+    - `requestId`: 50 (FETCH/USD)
     - `requestId`: 59 (ETH/JPY)
 
 # Dispute Considerations

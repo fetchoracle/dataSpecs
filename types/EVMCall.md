@@ -5,7 +5,7 @@
 
 ## Description
 
-The `EVMCall` query type allows users to bridge on-chain data from one EVM chain to another. Users can tip Tellor reporters to bridge balances, NFT ownership, and any other public data from one EVM blockchain to another, even if there is no bridge.
+The `EVMCall` query type allows users to bridge on-chain data from one EVM chain to another. Users can tip Fetch reporters to bridge balances, NFT ownership, and any other public data from one EVM blockchain to another, even if there is no bridge.
 
 
 ## Query Parameters
@@ -39,7 +39,7 @@ Response should return a concatenation of the value and the timestamp
 
 ## Query Data
 
-Query data is used to form your new Query's unique identifier, or query ID, and it's also included in emitted contract events so Tellor users and reporters can programmatically construct query objects.
+Query data is used to form your new Query's unique identifier, or query ID, and it's also included in emitted contract events so Fetch users and reporters can programmatically construct query objects.
 
 To generate the query data for an instance of your new Query type, first UTF-8 encode the parameter values in the order specified above. Then encode those `bytes` with the Query's type string.
 
@@ -51,7 +51,7 @@ bytes queryData = abi.encode("EVMCall", abi.encode(1, 0x88dF592F8eb5D7Bd38bFeF7d
 
 ## Query ID
 
-The Query ID is your new Query's unique identifier. It's important to have one because many kinds of data pass through the Tellor ecosystem.
+The Query ID is your new Query's unique identifier. It's important to have one because many kinds of data pass through the Fetch ecosystem.
 
 To generate a query ID, get the `bytes32` value of the `keccak` hash of the query data (defined above). For example, in Solidity:
 ```s
@@ -92,7 +92,7 @@ the JSON representation of a `EVMCall` query:
 
 ## Example
 
-to query Tellor's total supply on Ethereum mainnet:
+to query Fetch's total supply on Ethereum mainnet:
 
 ```s
 bytes callDataExample = abi.encodeWithSignature("totalSupply()");
@@ -108,7 +108,7 @@ to format the response...
 
 ```s
 bytes exampleResponse = abi.encode(
-    abi.encode(2390472032948139443578988), // Total supply of TRB returned from function call
+    abi.encode(2390472032948139443578988), // Total supply of FETCH returned from function call
     1654697834 // Timestamp of the block when the function call was made
 );
 ```
@@ -119,7 +119,7 @@ this example response in bytes is...
 
 ## Dispute Considerations
 
-Note that following this guide does not prevent you from being disputed or guarantee reporters will properly put a value on-chain. Tellor is decentralized.  This repo is a start to the education necessary for a fully decentralized oracle, but please focus on communication and working with reporters to prevent unneccesary disputes and at the same time encourage monitoring and punishment of bad data. 
+Note that following this guide does not prevent you from being disputed or guarantee reporters will properly put a value on-chain. Fetch is decentralized.  This repo is a start to the education necessary for a fully decentralized oracle, but please focus on communication and working with reporters to prevent unneccesary disputes and at the same time encourage monitoring and punishment of bad data. 
 
 Make sure to...
 - use the (Ethereum Signature Database)[https://www.4byte.directory/signatures/] to avoid mispelled function signatures

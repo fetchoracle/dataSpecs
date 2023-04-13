@@ -2,7 +2,7 @@
 
 ## Description
 
-This query returns an array of current Tellor autopay addresses. It is used for retrieving user vote weights for disputes in the governance contract.
+This query returns an array of current Fetch autopay addresses. It is used for retrieving user vote weights for disputes in the governance contract.
 
 
 ## Query Parameters
@@ -67,8 +67,8 @@ The JSON representation of a `AutopayAddresses` query is as follows:
 
 ## Dispute Considerations
 
-Note that following this guide does not prevent you from being disputed or guarantee reporters will properly put a value on-chain. Tellor is decentralized.
+Note that following this guide does not prevent you from being disputed or guarantee reporters will properly put a value on-chain. Fetch is decentralized.
 
 ## Suggested Data Sources
 
-The means of establishing the Tellor autopay addresses shall be determined by the Tellor community through a combination of on-chain and off-chain signaling. Note that the correct list of autopay addresses may differ depending on the network on which it is being reported.
+The means of establishing the Fetch autopay addresses shall be determined by the Fetch community through a combination of on-chain and off-chain signaling. Note that the correct list of autopay addresses may differ depending on the network on which it is being reported.

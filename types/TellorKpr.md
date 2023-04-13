@@ -2,16 +2,16 @@
 
 ## Query Name
 
-- `TellorKpr`
+- `FetchKpr`
 
 ## Query Description
-Utilize tellor's oracle to automate function calls by simply submitting a request.  Plus use the flexibility that autopay provides for either one time calls or frequent function calls.  Wether you want this to be done once or more frequently, its simple, all you have to do is submit a one time tip along with the query or set up a datafeed to have it triggered more frequently.
+Utilize fetch's oracle to automate function calls by simply submitting a request.  Plus use the flexibility that autopay provides for either one time calls or frequent function calls.  Wether you want this to be done once or more frequently, its simple, all you have to do is submit a one time tip along with the query or set up a datafeed to have it triggered more frequently.
 
 ## Query Parameters
 
 This query accepts five parameters: the contract address, the function signature data, the chain id, the timestamp when the function should be triggered, and the max gas cost that should be paid for the call.
 
-1. **contractAddress** (address): The contract address where the function to be called lives. (e.g. Tellor Autopay Address: [0xD789488E5ee48Ef8b0719843672Bc04c213b648c](https://mumbai.polygonscan.com/address/0xD789488E5ee48Ef8b0719843672Bc04c213b648c))
+1. **contractAddress** (address): The contract address where the function to be called lives. (e.g. Fetch Autopay Address: [0xD789488E5ee48Ef8b0719843672Bc04c213b648c](https://mumbai.polygonscan.com/address/0xD789488E5ee48Ef8b0719843672Bc04c213b648c))
 2. **functionData** (bytes): The bytes encoding of the function and its parameters' signature. (e.g. bytes.fromhex('57806e707c9ca4cc348680e2d4637472fc51228a079cb8a6a8cba51fe6f4ebbb3a930c8db9d5e25dabd5f0a48f45f5b6b524bac100df05eaf5311f3e5339ac7c3dd0a37e0000000000000000000000000000000000000000000000000000000000000060000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000627abef8'))
 
 :information_source: functionData is an encoding of the function and its parameters if any. So its important that the function is encoded with the appropriate parameters!
@@ -39,16 +39,16 @@ This query accepts five parameters: the contract address, the function signature
   max_gas_in_gwei = 400000 gwei
   convert_to_matic = max_gas_in_gwei/1e9 # 0.0004
   convert_gas_to_usd = convert_to_matic*0.59 # 0.59 matic in usd
-  payment_token_in_usd = 11 # $11 TRB
-  gas_in_trb = convert_gas_to_usd / payment_token_in_usd
-  gas_in_trb_e18 = gas_in_trb*1e18
+  payment_token_in_usd = 11 # $11 FETCH
+  gas_in_fetch = convert_gas_to_usd / payment_token_in_usd
+  gas_in_fetch_e18 = gas_in_fetch*1e18
     ```
 </details>
 
 *Descriptor:*
 ```json
 {
-  "type": "TellorKpr",
+  "type": "FetchKpr",
   "inputs": [
     {
       "type": "bytes",
@@ -84,12 +84,12 @@ The query response will be the transaction hash of the function call transaction
 
 ## Example
 
-### Tellor Keeper
+### Fetch Keeper
 
 *Query Descriptor:*
 
 ```json
-{"type":"TellorKpr","contractAddress":"0xD789488E5ee48Ef8b0719843672Bc04c213b648c","functionData":"0x57806e707c9ca4cc348680e2d4637472fc51228a079cb8a6a8cba51fe6f4ebbb3a930c8db9d5e25dabd5f0a48f45f5b6b524bac100df05eaf5311f3e5339ac7c3dd0a37e0000000000000000000000000000000000000000000000000000000000000060000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000627abef8", "chainId":80001, "timestamp":1652250730, "maxGasFee": 21454545455000}
+{"type":"FetchKpr","contractAddress":"0xD789488E5ee48Ef8b0719843672Bc04c213b648c","functionData":"0x57806e707c9ca4cc348680e2d4637472fc51228a079cb8a6a8cba51fe6f4ebbb3a930c8db9d5e25dabd5f0a48f45f5b6b524bac100df05eaf5311f3e5339ac7c3dd0a37e0000000000000000000000000000000000000000000000000000000000000060000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000627abef8", "chainId":80001, "timestamp":1652250730, "maxGasFee": 21454545455000}
 ```
 
 *queryData:*
@@ -101,7 +101,7 @@ The query response will be the transaction hash of the function call transaction
     bytes32 param2 = 0xb9d5e25dabd5f0a48f45f5b6b524bac100df05eaf5311f3e5339ac7c3dd0a37e;
     uint256[] param3 = [1652211448];
     bytes memory _functionData = abi.encodeWithSignature("claimTip(bytes32,bytes32,uint256[])",param1,param2,param3);
-    string memory _type = "TellorKpr";
+    string memory _type = "FetchKpr";
     address _contractAddress = 0xD789488E5ee48Ef8b0719843672Bc04c213b648c;
     uint256 _chainId = 80001;
     uint256 _timestamp = 1652250730;
@@ -117,7 +117,7 @@ The query response will be the transaction hash of the function call transaction
     ```python
   function_data_to_bytes = bytes.fromhex("0x57806e707c9ca4cc348680e2d4637472fc51228a079cb8a6a8cba51fe6f4ebbb3a930c8db9d5e25dabd5f0a48f45f5b6b524bac100df05eaf5311f3e5339ac7c3dd0a37e0000000000000000000000000000000000000000000000000000000000000060000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000627abef8"[2:])
     queryDataArgs = encode_abi(["address","bytes","uint256","uint256","uint256"], ["0xD789488E5ee48Ef8b0719843672Bc04c213b648c",function_data_to_bytes,80001,1652250730,21454545455000])
-    queryData = encode_abi(["string", "bytes"], ["TellorKpr", queryDataArgs])
+    queryData = encode_abi(["string", "bytes"], ["FetchKpr", queryDataArgs])
     ```
 
 </details>

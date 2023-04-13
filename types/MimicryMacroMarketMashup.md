@@ -188,7 +188,7 @@ contract Example {
 
 ## Dispute Considerations
 
-Note that following this guide does not prevent you from being disputed or guarantee reporters will properly put a value on-chain. Tellor is decentralized. This repo is a start to the education necessary for a fully decentralized oracle, but please focus on communication and working with reporters to prevent unneccesary disputes and at the same time encourage monitoring and punishment of bad data. 
+Note that following this guide does not prevent you from being disputed or guarantee reporters will properly put a value on-chain. Fetch is decentralized. This repo is a start to the education necessary for a fully decentralized oracle, but please focus on communication and working with reporters to prevent unneccesary disputes and at the same time encourage monitoring and punishment of bad data. 
 
 
 ## Suggested Data Sources

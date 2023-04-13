@@ -76,7 +76,7 @@ keccak256(abi.encode("CrossChainBalance", abi.encode(1,0x88dF592F8eb5D7Bd38bFeF7
 
 ## Calculating
 
-An example repo for generating the merkle root can be found here:  https://github.com/tellor-io/crosschainBalances
+An example repo for generating the merkle root can be found here:  https://github.com/fetchoracle/crosschainBalances
 
 
 ## Dispute Considerations

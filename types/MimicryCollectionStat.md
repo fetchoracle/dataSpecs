@@ -90,12 +90,12 @@ Full example to request Crypto Coven's TAMI:
 ```solidity
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity 0.8.12;
-import "usingtellor/contracts/UsingTellor.sol";
+import "usingfetch/contracts/UsingFetch.sol";
 
 
-contract Example is UsingTellor {
+contract Example is UsingFetch {
 
-    constructor(address payable _tellorAddress) UsingTellor (_tellorAddress) public {}
+    constructor(address payable _fetchAddress) UsingFetch (_fetchAddress) public {}
 
     function getCryptoCovenTami() external view returns (uint256) {
         bytes memory _args = abi.encode(
@@ -125,7 +125,7 @@ _queryId:
 
 ## Dispute Considerations
 
-Note that following this guide does not prevent you from being disputed or guarantee reporters will properly put a value on-chain. Tellor is decentralized.  This repo is a start to the education necessary for a fully decentralized oracle, but please focus on communication and working with reporters to prevent unneccesary disputes and at the same time encourage monitoring and punishment of bad data. 
+Note that following this guide does not prevent you from being disputed or guarantee reporters will properly put a value on-chain. Fetch is decentralized.  This repo is a start to the education necessary for a fully decentralized oracle, but please focus on communication and working with reporters to prevent unneccesary disputes and at the same time encourage monitoring and punishment of bad data. 
 
 
 ## Suggested Data Sources

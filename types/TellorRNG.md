@@ -1,8 +1,8 @@
-# TellorRNG Feeds
+# FetchRNG Feeds
 
 ## Query Name
 
-- `TellorRNG`
+- `FetchRNG`
 
 ## Query Description
 
@@ -10,7 +10,7 @@ This query returns a pseudorandom number by finding the next bitcoin blockhash a
 
 ## Query Parameters
 
-The `TellorRNG` query has one parameter which specifies the timestamp after which to find the next bitcoin blockhash.
+The `FetchRNG` query has one parameter which specifies the timestamp after which to find the next bitcoin blockhash.
 
 1. **timestamp** (uint256): timestamp after which to take next bitcoin blockhash
 
@@ -25,7 +25,7 @@ The query response consists of a bytes32 value in the following format:
 
 ```json
 {
-  "type": "TellorRNG",
+  "type": "FetchRNG",
   "inputs": [
     {
       "type": "uint256",
@@ -44,7 +44,7 @@ The query response consists of a bytes32 value in the following format:
 *queryData:*
 
 ```s
-abi.encode("TellorRNG", abi.encode(1652075943))
+abi.encode("FetchRNG", abi.encode(1652075943))
 ```
 
 `0x00000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000080000000000000000000000000000000000000000000000000000000000000000954656c6c6f72524e4700000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000006278ada7`
@@ -52,7 +52,7 @@ abi.encode("TellorRNG", abi.encode(1652075943))
 *queryID:*
 
 ```s
-keccak256(abi.encode("TellorRNG",abi.encode(1652075943)))
+keccak256(abi.encode("FetchRNG",abi.encode(1652075943)))
 ```
 
 `0xd3329783230f1d05be5c25a6a26d19f6a6f0e0518747de5245608eb1afcaa58d`

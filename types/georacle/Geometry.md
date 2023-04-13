@@ -46,7 +46,7 @@ The query response will consist of an int64 list, see example below for decoding
 ```
 ## Examples
 
-### Tellor Geometry
+### Fetch Geometry
 
 *Query Descriptor:*
 

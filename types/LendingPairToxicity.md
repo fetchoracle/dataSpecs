@@ -24,7 +24,7 @@ The query response will consist of a single 256-bit value in the following forma
 
 ## Query Data
 
-- **Description:** Query data is used to form your Query's unique identifier, or query ID, and it's also included in emitted contract events so Tellor users and reporters can programmatically construct query objects. To generate the query data, first encode the `collateral` and `loan` parameters as bytes, then encode the query type string with those bytes.
+- **Description:** Query data is used to form your Query's unique identifier, or query ID, and it's also included in emitted contract events so Fetch users and reporters can programmatically construct query objects. To generate the query data, first encode the `collateral` and `loan` parameters as bytes, then encode the query type string with those bytes.
 - **ABI Type:** `bytes`
 
 For example, to get the query data of an example instance of a `LendingPairToxicity` query using Solidity:
@@ -101,7 +101,7 @@ A toxicity value of 0.024 would be submitted on-chain as follows:
 
 ## Dispute Considerations
 
-Note that following this guide does not prevent you from being disputed or guarantee reporters will properly put a value on-chain. Tellor is decentralized.  This repo is a start to the education necessary for a fully decentralized oracle, but please focus on communication and working with reporters to prevent unnecessary disputes and at the same time encourage monitoring and punishment of bad data. 
+Note that following this guide does not prevent you from being disputed or guarantee reporters will properly put a value on-chain. Fetch is decentralized.  This repo is a start to the education necessary for a fully decentralized oracle, but please focus on communication and working with reporters to prevent unnecessary disputes and at the same time encourage monitoring and punishment of bad data. 
 
 
 ## Suggested Data Sources

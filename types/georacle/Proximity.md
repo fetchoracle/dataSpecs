@@ -62,7 +62,7 @@ The query response will consist of a list of string values in the following form
 
 ## Examples
 
-### Four restaurants near Tellor
+### Four restaurants near Fetch
 
 *Query Descriptor:*
 

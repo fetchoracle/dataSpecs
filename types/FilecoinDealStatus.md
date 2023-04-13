@@ -35,7 +35,7 @@ queryData = abi.encode("FileCoinDealStatus", abi.encode("bafy2bzacea3wsdh6y3a36t
 
 ## Query ID
 
-The Query ID is your new Query's unique identifier. It's important to have one because many kinds of data pass through the Tellor ecosystem.
+The Query ID is your new Query's unique identifier. It's important to have one because many kinds of data pass through the Fetch ecosystem.
 
 To generate a query ID, get the `bytes32` value of the `keccak` hash of the query data (defined above). For example, in Solidity:
 ```s

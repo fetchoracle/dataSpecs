@@ -1,19 +1,19 @@
-## TellorOracleAddress
+## FetchOracleAddress
 
 ## Description
 
-This query returns the latest Tellor oracle address. It is used for updating the time based rewards recipient on Ethereum mainnet.
+This query returns the latest Fetch oracle address. It is used for updating the time based rewards recipient on Ethereum mainnet.
 
 
 ## Query Parameters
 
-The `TellorOracleAddress` query has one parameter, which is always an empty `bytes` array.
+The `FetchOracleAddress` query has one parameter, which is always an empty `bytes` array.
 
 1. **phantom**
    - description: Empty bytes, always used for query types with no arguments
    - value type: `bytes`
 
-Parameters for this query type should never change, so there is only one possible query id for `TellorOracleAddress`.
+Parameters for this query type should never change, so there is only one possible query id for `FetchOracleAddress`.
 
 
 ## Response Type
@@ -28,7 +28,7 @@ The response will consist of a single address:
 The query data should be formed as follows:
 
 ```s
-queryData = abi.encode("TellorOracleAddress", abi.encode(bytes("")))
+queryData = abi.encode("FetchOracleAddress", abi.encode(bytes("")))
 ```
 
 `0x00000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000080000000000000000000000000000000000000000000000000000000000000001354656c6c6f724f7261636c654164647265737300000000000000000000000000000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000000`
@@ -47,10 +47,10 @@ keccak256(queryData)
 ## JSON Representation
 The JSON representation of a query type is needed to construct query objects in a variety of languages. It contains the essential components of a query: type name, parameters in an ordered list and their corresponding value types, as well as the expected response type for the query.
 
-The JSON representation of a `TellorOracleAddress` query is as follows:
+The JSON representation of a `FetchOracleAddress` query is as follows:
 ```json
 {
-    "type": "TellorOracleAddress",
+    "type": "FetchOracleAddress",
     "abi": [
         {
             "type": "bytes",
@@ -67,8 +67,8 @@ The JSON representation of a `TellorOracleAddress` query is as follows:
 
 ## Dispute Considerations
 
-Note that following this guide does not prevent you from being disputed or guarantee reporters will properly put a value on-chain. Tellor is decentralized.  
+Note that following this guide does not prevent you from being disputed or guarantee reporters will properly put a value on-chain. Fetch is decentralized.  
 
 ## Suggested Data Sources
 
-The means of establishing the Tellor oracle address shall be determined by the Tellor community through a combination of on-chain and off-chain signaling.
+The means of establishing the Fetch oracle address shall be determined by the Fetch community through a combination of on-chain and off-chain signaling.

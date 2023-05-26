@@ -1,5 +1,5 @@
 name: New Data Request Form
-description: Fill out this form to request new data on Tellor
+description: Fill out this form to request new data on Fetch
 title: "[New Data Request Form]: "
 body:
   - type: markdown
@@ -102,7 +102,7 @@ body:
     attributes:
       label: Dispute Considerations
       description: How should the data be formatted? How should it be measured? When should it be disputed?
-      placeholder: "Note that following this guide does not prevent you from being disputed or guarantee reporters will properly put a value on-chain. Tellor is decentralized. This repo is a start to the education necessary for a fully decentralized oracle, but please focus on communication and working with reporters to prevent unneccesary disputes and at the same time encourage monitoring and punishment of bad data."
+      placeholder: "Note that following this guide does not prevent you from being disputed or guarantee reporters will properly put a value on-chain. Fetch is decentralized. This repo is a start to the education necessary for a fully decentralized oracle, but please focus on communication and working with reporters to prevent unneccesary disputes and at the same time encourage monitoring and punishment of bad data."
   - type: textarea
     id: suggested-data-sources
     attributes:

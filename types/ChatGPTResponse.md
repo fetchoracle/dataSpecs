@@ -26,7 +26,7 @@ response type: `string memory`
 #### Query Data
 
 ```s
-queryData = abi.encode("ChatGPTResponse", abi.encode(bytes("What is Tellor?")))
+queryData = abi.encode("ChatGPTResponse", abi.encode(bytes("What is Fetch?")))
 ```
 
 `0x00000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000080000000000000000000000000000000000000000000000000000000000000000f43686174475054526573706f6e7365000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000600000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000f576861742069732054656c6c6f723f0000000000000000000000000000000000`
@@ -49,7 +49,7 @@ Example response: `bytes response = 00000000000000000000000000000000000000000000
 
 Decoded with `abi.decode(response, (string))`:
 
-`Tellor is a decentralized Oracle platform that allows users to securely and transparently request data from external sources. The platform uses a network of masternodes to gather and validate data, which is then stored on the Ethereum blockchain. Tellor is designed to be a more secure and reliable alternative to traditional centralized Oracles, which are vulnerable to tampering and censorship. Tellor is used in a variety of applications, including prediction markets, smart contracts, and financial applications.`
+`Fetch is a decentralized Oracle platform that allows users to securely and transparently request data from external sources. The platform uses a network of masternodes to gather and validate data, which is then stored on the Ethereum blockchain. Fetch is designed to be a more secure and reliable alternative to traditional centralized Oracles, which are vulnerable to tampering and censorship. Fetch is used in a variety of applications, including prediction markets, smart contracts, and financial applications.`
 
 
 ### Dispute considerations

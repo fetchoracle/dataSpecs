@@ -52,7 +52,7 @@ The query response will consist of a string and two signed 256-bit values in the
 
 ## Examples
 
-### Tellor Geocode
+### Fetch Geocode
 
 *Query Descriptor:*
 

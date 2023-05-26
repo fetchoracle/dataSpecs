@@ -19,7 +19,7 @@ The `SpotPrice` query has two parameters, which specify the pricing pair.
     - description: Selected currency (e.g. USD)
     - value type: `string`
 
-To request new spot price pair, please reach out to the Tellor team or make an issue/PR in this repository
+To request new spot price pair, please reach out to the Fetch team or make an issue/PR in this repository
 
 ## Response Type
 

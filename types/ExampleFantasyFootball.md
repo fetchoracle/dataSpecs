@@ -4,11 +4,11 @@
 
 ## Query Description
 
-This query is ideal for a hackathon/demo/mvp project. It's for defining some example sports data that'll be reported/retrieved to and from the Tellor Protocol. Specifically, the data contains some player IDs, game IDs, and a fantasy sports rating number. Numbers are used to map to player names (strings) and more information about when the game took place, because this saves gas. Mappings could be stored off-chain. Your choice.
+This query is ideal for a hackathon/demo/mvp project. It's for defining some example sports data that'll be reported/retrieved to and from the Fetch Protocol. Specifically, the data contains some player IDs, game IDs, and a fantasy sports rating number. Numbers are used to map to player names (strings) and more information about when the game took place, because this saves gas. Mappings could be stored off-chain. Your choice.
 
 You're putting this data on-chain so reporters can verify the fantasy sports rating number based on the player ID and game ID.
 
-Keep in mind, this is just one way to put your data on chain using Tellor. You can format it however you want! You just need to keep track of the unique identifier for your specific data (queryId), so you can distinguish it from all the other types of data pushed to Tellor. And ideally, you help develop a specification for you desired data, so others can reproduce it and report it on-chain for you.
+Keep in mind, this is just one way to put your data on chain using Fetch. You can format it however you want! You just need to keep track of the unique identifier for your specific data (queryId), so you can distinguish it from all the other types of data pushed to Fetch. And ideally, you help develop a specification for you desired data, so others can reproduce it and report it on-chain for you.
 
 ## Query Parameters
 
@@ -87,16 +87,16 @@ keccak256(abi.encode("ExampleFantasyFootball", abi.encode(1)))
 `0xe1defa9341b970361595a2019126e8b028e2f9bc5ba298f2228d33bd4d5fa86e`
 
 ## Decoding submitted value in solidity
-More Solidity help [here](https://tellor.io/docs/).
+More Solidity help [here](https://fetchoracle.com/docs/).
 
 ```js
 pragma solidity >=0.8.0;
 
-import "usingtellor/contracts/UsingTellor.sol";
+import "usingfetch/contracts/UsingFetch.sol";
 
-contract MyContract is UsingTellor {
+contract MyContract is UsingFetch {
 
-  constructor(address payable _tellorAddress) UsingTellor (_tellorAddress) public {}
+  constructor(address payable _fetchAddress) UsingFetch (_fetchAddress) public {}
 
   function getFirstPlayerFantasyStat() external view returns(int256) {
     

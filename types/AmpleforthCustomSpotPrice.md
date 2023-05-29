@@ -67,8 +67,8 @@ The JSON representation of a `AmpleforthCustomSpotPrice` query is as follows:
 
 ## Dispute Considerations
 
-Note that following this guide does not prevent you from being disputed or guarantee reporters will properly put a value on-chain. Tellor is decentralized.  
+Note that following this guide does not prevent you from being disputed or guarantee reporters will properly put a value on-chain. Fetch is decentralized.  
 
 ## Suggested Data Sources
 
-The sources and calculation for this query type is specified by the Ampleforth protocol. See the [Telliot](https://github.com/tellor-io/telliot-feeds) codebase for an example implementation.
+The sources and calculation for this query type is specified by the Ampleforth protocol. See the [Telliot](https://github.com/fetchoracle/telliot-feeds) codebase for an example implementation.

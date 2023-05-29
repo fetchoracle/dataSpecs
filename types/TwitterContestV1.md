@@ -42,12 +42,12 @@ keccak256(queryData)
 ```solidity
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity 0.8.12;
-import "usingtellor/contracts/UsingTellor.sol";
+import "usingfetch/contracts/UsingFetch.sol";
 
 
-contract Example is UsingTellor {
+contract Example is UsingFetch {
 
-    constructor(address payable _tellorAddress) UsingTellor (_tellorAddress) public {}
+    constructor(address payable _fetchAddress) UsingFetch (_fetchAddress) public {}
 
     function getLoser(uint256 _index) external view returns (string) {
         bytes memory _queryData = abi.encode("TwitterContestV1", abi.encode(bytes("")));

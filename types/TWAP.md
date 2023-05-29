@@ -6,7 +6,7 @@
 
 ## Description
 
-This is a proposal for a new query type for reporting a TWAP spot price to the Tellor network. The query type will be called `TWAP`.
+This is a proposal for a new query type for reporting a TWAP spot price to the Fetch network. The query type will be called `TWAP`.
 
 
 ## Query Parameters
@@ -43,7 +43,7 @@ queryData = abi.encode("TWAP", abi.encode("eth", "usd", 86400))
 
 ## Query ID
 
-The Query ID is your new Query's unique identifier. It's important to have one because many kinds of data pass through the Tellor ecosystem.
+The Query ID is your new Query's unique identifier. It's important to have one because many kinds of data pass through the Fetch ecosystem.
 
 To generate a query ID, get the `bytes32` value of the `keccak` hash of the query data (defined above). For example, in Solidity:
 
@@ -101,7 +101,7 @@ You can use [this tool](https://queryidbuilder.herokuapp.com/custom) to generate
 
 ## Dispute Considerations
 
-Note that following this guide does not prevent you from being disputed or guarantee reporters will properly put a value on-chain. Tellor is decentralized.  This repo is a start to the education necessary for a fully decentralized oracle, but please focus on communication and working with reporters to prevent unneccesary disputes and at the same time encourage monitoring and punishment of bad data. 
+Note that following this guide does not prevent you from being disputed or guarantee reporters will properly put a value on-chain. Fetch is decentralized.  This repo is a start to the education necessary for a fully decentralized oracle, but please focus on communication and working with reporters to prevent unneccesary disputes and at the same time encourage monitoring and punishment of bad data. 
 
 - Multiple sources should be used whenever possible.
 - It is the reporters responsibility to ensure that the feed result is *reasonable* enough for a community consensus, otherwise it may be subject to dispute.

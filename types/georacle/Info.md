@@ -25,7 +25,7 @@ The query response will consist of a string list value in the following format:
 
 ## Examples
 
-### Tellor Info
+### Fetch Info
 
 *Query Descriptor:*
 

@@ -4,7 +4,7 @@
 
 ## Query Description
 
-Use this query type to report numerical values from any API to Tellor oracles. Only use this query type for testnet, as data sources with single points-of-failure shouldn't be used in production.
+Use this query type to report numerical values from any API to Fetch oracles. Only use this query type for testnet, as data sources with single points-of-failure shouldn't be used in production.
 
 ## Query Parameters
 
@@ -25,7 +25,7 @@ The query response will consist of a single 256-bit value in the following forma
 - `abi_type`: ufixed256x18 (18 decimals of precision)
 - `packed`: false
 
-For example, a reporter decodes an instance of this query to retrieve its `url` and `parseStr` parameter values. The reporter uses the decoded `url` string to retrieve a JSON response from the API in question, then retrieves the target number from that JSON blob with the decoded `parseStr`. The number is 5.25, so the reporter multiplies it by 1e18 for the proper precision, encodes it as bytes, and submits the value to a Tellor oracle.
+For example, a reporter decodes an instance of this query to retrieve its `url` and `parseStr` parameter values. The reporter uses the decoded `url` string to retrieve a JSON response from the API in question, then retrieves the target number from that JSON blob with the decoded `parseStr`. The number is 5.25, so the reporter multiplies it by 1e18 for the proper precision, encodes it as bytes, and submits the value to a Fetch oracle.
 
 ## Example 1: USD spot price of Garlicoin
 Get a simple spot price for garlicoin by querying an API for its price.

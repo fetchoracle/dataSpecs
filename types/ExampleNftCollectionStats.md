@@ -67,16 +67,16 @@ keccak256(abi.encode("ExampleNftCollectionStats", abi.encode("proof-moonbirds"))
 `0xe01a8d6c7904ee37aadcc5b7086a1290d0861f1b9a93c08c7ade5ca1d7bb6f06`
 
 ## Decoding submitted value in solidity
-More Solidity help [here](https://tellor.io/docs/).
+More Solidity help [here](https://fetchoracle.com/docs/).
 
 ```js
 pragma solidity >=0.8.0;
 
-import "usingtellor/contracts/UsingTellor.sol";
+import "usingfetch/contracts/UsingFetch.sol";
 
-contract MyContract is UsingTellor {
+contract MyContract is UsingFetch {
 
-  constructor(address payable _tellorAddress) UsingTellor (_tellorAddress) public {}
+  constructor(address payable _fetchAddress) UsingFetch (_fetchAddress) public {}
 
   function getCollectionFloorPrice() external view returns(uint256) {
     

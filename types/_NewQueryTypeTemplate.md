@@ -52,7 +52,7 @@ For example, the `SpotPrice`'s response type is an unpacked 256 bit value with 1
 
 ## Query Data
 
-Query data is used to form your new Query's unique identifier, or query ID, and it's also included in emitted contract events so Tellor users and reporters can programmatically construct query objects.
+Query data is used to form your new Query's unique identifier, or query ID, and it's also included in emitted contract events so Fetch users and reporters can programmatically construct query objects.
 
 To generate the query data for an instance of your new Query type, first UTF-8 encode the parameter values in the order specified above. Then encode those `bytes` with the Query's type string. If there are no parameters for a query, instead encode empty bytes first.
 
@@ -68,7 +68,7 @@ queryData = abi.encode("QueryWithNoParameters", abi.encode(bytes("")))
 
 ## Query ID
 
-The Query ID is your new Query's unique identifier. It's important to have one because many kinds of data pass through the Tellor ecosystem.
+The Query ID is your new Query's unique identifier. It's important to have one because many kinds of data pass through the Fetch ecosystem.
 
 To generate a query ID, get the `bytes32` value of the `keccak` hash of the query data (defined above). For example, in Solidity:
 ```s
@@ -109,7 +109,7 @@ A working example mapping of all the various inputs and parameters to a valid qu
 
 ## Dispute Considerations
 
-Note that following this guide does not prevent you from being disputed or guarantee reporters will properly put a value on-chain. Tellor is decentralized.  This repo is a start to the education necessary for a fully decentralized oracle, but please focus on communication and working with reporters to prevent unneccesary disputes and at the same time encourage monitoring and punishment of bad data. 
+Note that following this guide does not prevent you from being disputed or guarantee reporters will properly put a value on-chain. Fetch is decentralized.  This repo is a start to the education necessary for a fully decentralized oracle, but please focus on communication and working with reporters to prevent unneccesary disputes and at the same time encourage monitoring and punishment of bad data. 
 
 
 ## Suggested Data Sources

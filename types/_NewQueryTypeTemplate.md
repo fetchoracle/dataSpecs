@@ -58,7 +58,7 @@ To generate the query data for an instance of your new Query type, first UTF-8 e
 
 For example, to get the query data of an example instance of a `SpotPrice` query using Solidity:
 ```s
-queryData = abi.encode("SpotPrice", abi.encode("eth", "usd"))
+queryData = abi.encode("SpotPrice", abi.encode("pls", "usd"))
 ```
 
 And for a query with no parameters:

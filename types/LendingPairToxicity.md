@@ -10,7 +10,7 @@ This query type is used to report a toxicity measure of a given collateral/loan 
 The `LendingPairToxicity` query has two parameters, which specify the collateral and loan asset pair.
 
 1. **collateral**
-	- description: Collateral asset symbol (e.g. eth)
+	- description: Collateral asset symbol (e.g. pls)
 	- value type: `string`
 2. **loan**
 	- description: Loan asset symbol (e.g. dai)
@@ -30,7 +30,7 @@ The query response will consist of a single 256-bit value in the following forma
 For example, to get the query data of an example instance of a `LendingPairToxicity` query using Solidity:
 
 ```s
-queryData = abi.encode(“LendingPairToxicity, abi.encode("eth", "dai"))
+queryData = abi.encode(“LendingPairToxicity, abi.encode("pls", "dai"))
 ````
 
 ## Query ID

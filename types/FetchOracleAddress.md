@@ -2,7 +2,7 @@
 
 ## Description
 
-This query returns the latest Fetch oracle address. It is used for updating the time based rewards recipient on Ethereum mainnet.
+This query returns the latest Fetch oracle address. It is used for updating the time based rewards recipient on Pulsechain mainnet.
 
 
 ## Query Parameters

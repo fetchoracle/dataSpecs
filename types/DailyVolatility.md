@@ -15,7 +15,7 @@ The parameters of the ``DailyVolatility`` query type will be the `asset`, `curre
 
 ```
 1. asset
-    - description: Asset ID (ex: ETH)
+    - description: Asset ID (ex: PLS)
     - value type: `string`
 2. currency
     - description: Selected currency (ex: USD)
@@ -38,7 +38,7 @@ The parameters of the ``DailyVolatility`` query type will be the `asset`, `curre
 ## Query Data
 
 ```s
-queryData = abi.encode("`DailyVolatility`", abi.encode("eth", "usd", 30))
+queryData = abi.encode("`DailyVolatility`", abi.encode("pls", "usd", 30))
 ```
 
 ## Query ID
@@ -80,10 +80,10 @@ The JSON representation of a `DailyVolatility` query:
 ## Example
 A working example mapping of all the various inputs and parameters to a valid queryID. 
 
-The queryData for a 30-day ETH/USD Volatility:
+The queryData for a 30-day PLS/USD Volatility:
 
 ```s
-queryData = abi.encode("DailyVolatility", abi.encode("eth", "usd", 30))
+queryData = abi.encode("DailyVolatility", abi.encode("pls", "usd", 30))
 queryId = keccack256(queryData)
 ```
 

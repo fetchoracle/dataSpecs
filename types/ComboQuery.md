@@ -43,12 +43,12 @@ The query response will consist of a bytes value in the following format:
 
 *queryData:* 
 
-Example for SpotPrice(eth,usd) and SpotPrice(btc,usd)
+Example for SpotPrice(pls,usd) and SpotPrice(fetch,usd)
 
 ```s
 keccak256(abi.encode("ComboQuery", abi.encode(
-                                      [abi.encode("SpotPrice", abi.encode("eth","usd")),
-                                      abi.encode("SpotPrice", abi.encode("eth","usd"))]
+                                      [abi.encode("SpotPrice", abi.encode("pls","usd")),
+                                      abi.encode("SpotPrice", abi.encode("fetch","usd"))]
 )))
 ```
 
@@ -58,8 +58,8 @@ keccak256(abi.encode("ComboQuery", abi.encode(
 
 ```s
 keccak256(abi.encode("ComboQuery", abi.encode(
-                                      [abi.encode("SpotPrice", abi.encode("eth","usd")),
-                                      abi.encode("SpotPrice", abi.encode("eth","usd"))]
+                                      [abi.encode("SpotPrice", abi.encode("pls","usd")),
+                                      abi.encode("SpotPrice", abi.encode("fetch","usd"))]
 )))
 ```
 
@@ -78,8 +78,8 @@ In the example query:
 
 ```
 keccak256(abi.encode("ComboQuery", abi.encode(
-                                      [abi.encode("SpotPrice", abi.encode("eth","usd")),
-                                      abi.encode("SpotPrice", abi.encode("eth","usd"))]
+                                      [abi.encode("SpotPrice", abi.encode("pls","usd")),
+                                      abi.encode("SpotPrice", abi.encode("pls","usd"))]
 )))
 
 ```

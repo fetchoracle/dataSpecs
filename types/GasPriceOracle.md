@@ -6,7 +6,7 @@
 
 ## Description
 
-This is a proposal for a new query type for reporting a gas price in gwei to the Fetch network. The query type will be called `GasPriceOracle`. Its main use case is for gas refunds: protocols will need an accurate estimate for the cost of historical user transactions in gas. Given its approach, this `GasPriceOracle` is best suited for refunding users an approximation of their gas spent according to an average of gas prices from that time period.
+This is a proposal for a new query type for reporting a gas price in gbeats to the Fetch network. The query type will be called `GasPriceOracle`. Its main use case is for gas refunds: protocols will need an accurate estimate for the cost of historical user transactions in gas. Given its approach, this `GasPriceOracle` is best suited for refunding users an approximation of their gas spent according to an average of gas prices from that time period.
 
 
 ## Query Parameters
@@ -15,7 +15,7 @@ The parameters of the `GasPriceOracle` query type will be the `chainId` and `tim
 
 ```
 1. chainId
-    - description: unique id of the EVM chain (ex: rinkeby is 4)
+    - description: unique id of the EVM chain (ex: pulsev4 is 943)
     - value type: `uint256`
 2. timestamp
     - description: the unix timestamp to calculate on-chain gas price at
@@ -25,7 +25,7 @@ The parameters of the `GasPriceOracle` query type will be the `chainId` and `tim
 
 ## Response Type
 
-`GasPriceOracle`'s response type is an unpacked 256 bit value with 18 decimals of precision. It's response type is measured in gwei:
+`GasPriceOracle`'s response type is an unpacked 256 bit value with 18 decimals of precision. It's response type is measured in gbeats:
 ```
 - abi_type: ufixed256x18 (18 decimals of precision)
 - packed: false
@@ -77,10 +77,10 @@ The JSON representation of a `GasPriceOracle` query:
 ## Example
 A working example mapping of all the various inputs and parameters to a valid queryID. 
 
-The queryData for mainnet ethereum (chainId `1`) at unix timestamp `1650465649`:
+The queryData for mainnet pulsechain (chainId `369`) at unix timestamp `1650465649`:
 
 ```s
-queryData = abi.encode("GasPriceOracle", abi.encode(1, 1650465649))
+queryData = abi.encode("GasPriceOracle", abi.encode(369, 1650465649))
 queryId = keccack256(queryData)
 ```
 
@@ -105,7 +105,7 @@ Note that following this guide does not prevent you from being disputed or guara
 - aggregate/medianize gas prices from the relevant block(s)
 - be careful when sourcing data from a black box API
 - use EIP-1559 gas strategy (the sum of the base fee and priority fee)
-- always measured in gwei
+- always measured in gbeats
 
 
 

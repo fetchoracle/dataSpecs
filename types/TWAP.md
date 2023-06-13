@@ -15,7 +15,7 @@ The parameters of the `TWAP` query type will be the `asset`, `currency`, and `ti
 
 ```
 1. asset
-    - description: Asset ID (ex: ETH)
+    - description: Asset ID (ex: PLS)
     - value type: `string`
 2. currency
     - description: selected currency (ex: USD)
@@ -38,7 +38,7 @@ The parameters of the `TWAP` query type will be the `asset`, `currency`, and `ti
 ## Query Data
 
 ```s
-queryData = abi.encode("TWAP", abi.encode("eth", "usd", 86400))
+queryData = abi.encode("TWAP", abi.encode("pls", "usd", 86400))
 ```
 
 ## Query ID
@@ -84,10 +84,10 @@ The JSON representation of a `TWAP` query:
 ## Example
 A working example mapping of all the various inputs and parameters to a valid queryID. 
 
-The queryData for a 7-day ETH/USD TWAP:
+The queryData for a 7-day PLS/USD TWAP:
 
 ```s
-queryData = abi.encode("TWAP", abi.encode("eth", "usd", 604800))
+queryData = abi.encode("TWAP", abi.encode("pls", "usd", 604800))
 queryId = keccack256(queryData)
 ```
 

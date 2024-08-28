@@ -42,4 +42,4 @@ This repository is maintained by the [Fetch team](https://github.com/orgs/fetcho
 
 ## Copyright
 
-Fetch Inc. 2023
+Fetch Inc. 2024
